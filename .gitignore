@@ -2,3 +2,7 @@ node_modules/
 .idea/
 coverage/
 dist/
+*.jar
+chromedriver
+npm-debug.log
+tests_output/

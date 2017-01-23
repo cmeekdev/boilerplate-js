@@ -1,3 +1,4 @@
+var path = require('path');
 var fs = require('fs');
 
 var nodeModules = {};
@@ -36,6 +37,7 @@ module.exports = [
             ]
         },
         resolve: {
+            root: [path.resolve('./src/client')],
             extensions: ['', '.js', '.jsx']
         },
         devServer: {

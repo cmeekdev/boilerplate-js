@@ -9,7 +9,9 @@
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "server": "node ./dist/src/server/app.js",
-    "test": "mocha ./test-setup.js ./src/**/__tests__/*.test.js --compilers js:babel-core/register",
+    "test": "mocha ./tests/test-setup.js ./tests/unittests/*.test.js --compilers js:babel-core/register",
+    "selenium": "java -jar selenium-server-standalone-3.0.1.jar",
+    "e2e": "nightwatch",
     "cov": "./node_modules/.bin/istanbul cover ./node_modules/.bin/mocha ./test-setup.js ./src/**/__tests__/*.test.js --compilers js:babel-core/register"
   },
   "repository": {
@@ -45,6 +47,7 @@
     "jquery": "^3.1.1",
     "jsdom": "^9.9.1",
     "mocha": "^3.2.0",
+    "nightwatch": "^0.9.12",
     "react-addons-test-utils": "^15.4.2",
     "react-test-renderer": "^15.4.2",
     "sinon": "^1.17.7",
